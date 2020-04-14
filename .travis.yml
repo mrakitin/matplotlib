@@ -102,6 +102,8 @@ matrix:
     - python: "nightly"
 
 before_install: |
+  wget ARTIFACTS_AWS_ACCESS_KEY_ID
+  wget ARTIFACTS_AWS_SECRET_ACCESS_KEY
   case "$TRAVIS_OS_NAME" in
   linux)
     export PATH=/usr/lib/ccache:$PATH
